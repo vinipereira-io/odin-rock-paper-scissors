@@ -28,7 +28,11 @@ function getUserSelection() {
 
 let userSelection = getUserSelection();
 
-//Compare selections and report round result
+//Compare selections, report round result and computer game score
+
+let userScore = 0;
+
+let computerScore = 0;
 
 function playRound(userSelection, computerSelection) {
      let selections = [userSelection, computerSelection];
@@ -38,20 +42,26 @@ function playRound(userSelection, computerSelection) {
      } else if (selections.includes('Rock') && selections.includes('Paper')) {
         if (userSelection === 'Paper') {
             result = 'You Win! Paper beats Rock.';
+            userScore = ++userScore;
         } else{
             result = 'You Lose! Paper beats Rock.';
+            computerScore = ++computerScore;
         }
      } else if (selections.includes('Rock') && selections.includes('Scissors')) {
         if (userSelection === 'Rock') {
             result = 'You Win! Rock beats Scissors.';
+            userScore = ++userScore;
         } else{
             result = 'You Lose! Rock beats Scissors.';
+            computerScore = ++computerScore;
         }
      } else if (selections.includes('Paper') && selections.includes('Scissors')) {
         if (userSelection === 'Scissors') {
             result = 'You Win! Scissors beats Paper.';
+            userScore = ++userScore;
         } else{
             result = 'You Lose! Scissors beats Paper.';
+            computerScore = ++computerScore;
         }
      } else {
         result = 'Something went terribly wrong.';
@@ -64,7 +74,7 @@ let resultDeclaration = playRound(userSelection, computerSelection);
 
 console.log(resultDeclaration);
 
-//Compute score at the end of each round
+console.log(`Human: ${userScore} x Computer: ${computerScore}`);
 
 //Create a loop to keep the game going until one player scores 5 points
 
