@@ -8,7 +8,7 @@ let userScore = 0;
 
 let computerScore = 0;
 
-game();
+//game();
 
 //Get the computer selection with a random function
 
@@ -68,9 +68,17 @@ function playRound(userSelection, computerSelection) {
      return result;
 }
 
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        console.log(playRound(button.dataset.selection, getComputerSelection()));
+    });
+});
+
 //Create a loop to play 5 rounds
 
-function game() {
+/*function game() {
     for (let i = 0; i < 5; i++) {
         let computerSelection = getComputerSelection();
 
@@ -94,4 +102,4 @@ if (userScore > computerScore) {
     console.log(`You Lose! Human: ${userScore} x Computer: ${computerScore}`);
 } else {
     console.log(`Tie Game! Human: ${userScore} x Computer: ${computerScore}`);
-}
+}*/
