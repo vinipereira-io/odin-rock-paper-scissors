@@ -1,0 +1,70 @@
+*{
+    font-family: sans-serif;
+}
+
+.content-container {
+    padding: 15%;
+}
+
+.buttons-container{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    margin: 25px;
+    width: 150px;
+    height: 75px;
+    border: 1px solid;
+    border-radius: 10px;
+    color: white;
+    font-size: medium;
+    font-weight: 700;
+}
+
+[data-selection='Rock'] {
+    background: green;
+}
+
+[data-selection='Paper'] {
+    background: blue;
+}
+
+[data-selection='Scissors'] {
+    background: red;
+}
+
+.results{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.result-board{
+    margin-top: 50px;
+    font-size: larger;
+}
+
+.score-board{
+    font-size: larger;
+    font-weight: 700;
+    margin-top: 50px;
+}
+
+.final-board{
+    font-size: larger;
+    font-weight: 700;
+    margin-top: 15px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    display: none;
+}
+
+.game-over{
+    display: block;
+}
