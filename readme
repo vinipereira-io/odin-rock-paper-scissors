@@ -1,5 +1,5 @@
 Create a logic to play the game "Rock, Paper, Scissors" between human and computer. 
 In this game players select one option among Rock, Paper and Scissors. Rock beats Scissors; Paper beats Rock and Scissors beats Paper. Equal selections tie.
-The human selection will be input, while the computer selection will be random.
+The human click on one of three buttons to select their option, while the computer selection will be random.
 We need to compare selections to determine who gets the round point. In case of tie, nobody gets the point.
-It will be a 5-round game so the player with higher score after 5 rounds is the game winner
+The first player to score 5 points is the game winner
